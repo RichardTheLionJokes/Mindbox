@@ -8,8 +8,15 @@ namespace Mindbox
         static void Main(string[] args)
         {
             //площадь круга
-            float r = 5;
-            Console.WriteLine("Площадь круга: " + Circle.Area(r));
+            float r = -5;
+            try
+            {
+                Console.WriteLine("Площадь круга: " + Circle.Area(r));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
 
             //площадь треугольника по 3-м сторонам
             float[] sides = { 3, 4, 5 };

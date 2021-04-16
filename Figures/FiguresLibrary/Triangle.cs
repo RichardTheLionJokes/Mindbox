@@ -9,11 +9,13 @@ namespace FiguresLibrary
         public const string NegativeArgMessage = "Negative side length!";
         public const string IncorrectSidesMessage = "Incorrect sides ratio!";
 
+        //площадь треугольника по трем сторонам
         public static float Area(float a, float b, float c)
         {
             return TrArea(a, b, c);
         }
 
+        //площадь треугольника по массиву длин сторон
         public static float Area(float[] sides)
         {
             if (sides.Length != 3) throw new IndexOutOfRangeException("Triangle must have 3 sides");
@@ -28,11 +30,13 @@ namespace FiguresLibrary
             return (float)Math.Sqrt(p * (p - a) * (p - b) * (p - c));
         }
 
+        //проверка треугольника на прямоугольность по трем сторонам
         public static bool IsRect(float a, float b, float c)
         {
             return TrIsRect(a, b, c);
         }
 
+        //проверка треугольника на прямоугольность по массиву длин сторон
         public static bool IsRect(float[] sides)
         {
             if (sides.Length != 3) throw new IndexOutOfRangeException("Triangle must have 3 sides");

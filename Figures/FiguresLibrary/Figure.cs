@@ -6,6 +6,7 @@ namespace FiguresLibrary
 {
     public static class Figure //произвольная фигура, заданная массивом точек с координатами x, y
     {
+        //площадь произвольной фигуры
         public static float Area((float, float)[] points)
         {
             float s = 0;

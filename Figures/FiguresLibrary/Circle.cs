@@ -6,9 +6,10 @@ namespace FiguresLibrary
 {
     public static class Circle
     {
+        //площадь круга
         public static float Area(float radius)
         {
-            if (radius <= 0) throw new ArgumentOutOfRangeException("Радиус должен иметь значение больше 0");
+            if (radius <= 0) throw new ArgumentOutOfRangeException("radius", "Radius must be greater than 0");
 
             return (float)Math.PI * radius * radius;
         }
