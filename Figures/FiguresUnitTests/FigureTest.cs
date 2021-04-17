@@ -14,7 +14,7 @@ namespace FiguresUnitTests
             float r = 2;
             float expected = 4 * (float)Math.PI;
             float actual = Circle.Area(r);
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected, actual, float.Epsilon);
         }
 
         //проверка положительного значения радиуса
@@ -137,7 +137,7 @@ namespace FiguresUnitTests
             float c = 5;
             float expected = 6;
             float actual = Triangle.Area(a, b, c);
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected, actual, float.Epsilon);
         }
 
         [TestMethod]
@@ -146,7 +146,7 @@ namespace FiguresUnitTests
             float[] sides = { 3, 4, 5 };
             float expected = 6;
             float actual = Triangle.Area(sides);
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected, actual, float.Epsilon);
         }
 
         //проверка положительности длин сторон при вычислении площади
@@ -238,7 +238,7 @@ namespace FiguresUnitTests
             (float, float)[] points = { (3, 4), (5, 11), (12, 8), (9, 5), (5, 6) };
             float expected = 30;
             float actual = Figure.Area(points);
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected, actual, float.Epsilon);
         }
     }
 }
